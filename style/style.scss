@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "mixins.scss";
+@import "def_values";
+@import "effects";
+
+*{
+    box-sizing:border-box; 
+    margin: 0px;
+    border: 0px;
+    & html, body{
+        height: 100vh;
+        background-image: $gradient;
+    }
+}
+header.container {
+    @include container;
+    display: flex;
+    align-items: center;
+    height: $header_height;
+    & p{
+        @include text;
+        font-weight: 700;
+        font-size: $font_size_big;
+        margin: 10px 0px;
+    }
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: $main_height;
+    padding: 0 $padds;
+    & article.container_chart {
+        @include article;
+        flex-flow: column nowrap;
+        & section.info {
+            @include flex;
+            gap: 5px;
+            & article {
+                @include flex;
+                gap: 5px;
+            }
+            & p {
+                @include dat_tuple;
+                &.node {
+                    order: 9;
+                }
+            }
+            & .dataId {
+                background-color: $seco_col;
+                color: $main_col;
+            }
+
+            & nav{
+                margin: 10px 0px;
+                flex: 1 1 100%;
+                order: 10;
+                justify-content: flex-start;
+            }
+            & nav ul{
+                list-style: none;
+                padding: 0;
+                & li a {
+                    @include text;
+                    color: $seco_col;
+                    font-size: $font_size;
+                }
+            }
+        }
+    }
+    & article.container_UI nav ul {
+        @include nav_button;
+    }
+}
+.hide {
+    @include hide;
+}
+.show {
+    @include flex;
+    @include canvas;
+}
+#select {
+    @include selected;
+    & a::before{
+        content: 'x';
+        margin: 10px;
+    }
+}
+
+@import "media_query";

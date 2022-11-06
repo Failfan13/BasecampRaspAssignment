@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBP graph interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="container">
+        <p>Raspb data</p>
+    </header>
+    <main class="container">
+        <article class="container_chart top">
+            <section class="chart every show main"></section>
+            <section class="chart temp show"></section>
+            <section class="chart humid show"></section>
+            <section class="chart press show"></section>
+            <section class="info">
+                <p class="dataId node">node_id: 658</p>
+                <nav>
+                    <ul><li><a href="https://github.com/Failfan13">Github files</a></li></ul>
+                </nav>
+            </section>
+        </article>
+        <article class="container_UI">
+            <nav>
+                <ul>
+                    <li id="select"><a class="btn every" href="#">Everything</a></li>
+                    <li><a class="btn temp" href="#">Temp</a></li>
+                    <li><a class="btn humid" href="#">Humidity</a></li>
+                    <li><a class="btn press" href="#">Pressure</a></li>
+                </ul>
+            </nav>
+        </article>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.3.2/math.js"></script>
+<script type="module" src="interface.js"></script>
+</html>

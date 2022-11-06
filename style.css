@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  border: 0px;
+}
+* html, * body {
+  height: 100vh;
+  background-image: linear-gradient(to bottom left, #d9e5eb, #e8e8e8);
+}
+
+header.container {
+  display: block;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  height: 130px;
+}
+header.container p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #1b1818;
+  font-weight: 700;
+  font-size: 2.4em;
+  margin: 10px 0px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 130px);
+  padding: 0 20px;
+}
+main article.container_chart {
+  display: block;
+  padding: 0 20px;
+  display: flex;
+  flex-flow: row wrap;
+  box-shadow: 0px 0px 30px rgba(27, 24, 24, 0.1450980392);
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #e8e8e8;
+  padding: 20px 20px;
+  height: 100%;
+  flex-flow: column nowrap;
+}
+main article.container_chart section.info {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5px;
+}
+main article.container_chart section.info article {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5px;
+}
+main article.container_chart section.info p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #1b1818;
+  display: flex;
+  flex-flow: row wrap;
+  order: 0;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 0.8em;
+  padding: 3px 5px;
+  background-color: transparent;
+  border: solid 2px #540ff5;
+}
+main article.container_chart section.info p.node {
+  order: 9;
+}
+main article.container_chart section.info .dataId {
+  background-color: #540ff5;
+  color: #e8e8e8;
+}
+main article.container_chart section.info nav {
+  margin: 10px 0px;
+  flex: 1 1 100%;
+  order: 10;
+  justify-content: flex-start;
+}
+main article.container_chart section.info nav ul {
+  list-style: none;
+  padding: 0;
+}
+main article.container_chart section.info nav ul li a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #1b1818;
+  color: #540ff5;
+  font-size: 1em;
+}
+main article.container_UI nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  gap: 10px;
+  margin: 20px 0px 65px 0px;
+}
+main article.container_UI nav ul li {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #1b1818;
+  border-radius: 10px;
+  box-shadow: 0px 5px 0px rgba(27, 24, 24, 0.1450980392);
+  list-style: none;
+  background-color: #540ff5;
+  width: calc(50% - 5px);
+  height: 50px;
+}
+main article.container_UI nav ul li a {
+  display: flex;
+  flex-flow: row wrap;
+  text-decoration: none;
+  color: #e8e8e8;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  display: none;
+  margin: 0;
+  z-index: -1;
+}
+
+.show {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 30px rgba(27, 24, 24, 0.1450980392);
+  width: 100%;
+  height: 100%;
+  background-color: #e8e8e8;
+  margin: 0 0 20px 0;
+}
+
+#select {
+  position: relative;
+  top: 5px;
+  box-shadow: 0px 0px;
+}
+#select a::before {
+  content: "x";
+  margin: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  article canvas {
+    width: 95% !important;
+    height: 50% !important;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  main.container {
+    flex-direction: row;
+    padding-right: 0;
+  }
+  main.container article {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  main.container article:first-child {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  main.container article section canvas {
+    height: 80% !important;
+    width: 90% !important;
+  }
+  main.container article section.show {
+    width: 45%;
+    height: 35%;
+    order: 1;
+  }
+  main.container article section.show.main {
+    width: 50%;
+    height: 40%;
+    order: 0;
+  }
+  main.container article section.info {
+    order: 3;
+  }
+  main.container article.container_UI {
+    width: 300px;
+    background-color: #540ff5;
+    border-radius: 20px 0px 0px 0px;
+  }
+  main.container article.container_UI nav ul {
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 20px;
+  }
+  main.container article.container_UI nav ul li {
+    background-color: #e8e8e8;
+    box-shadow: 0px 0px 30px rgba(27, 24, 24, 0.1450980392);
+    width: 100%;
+  }
+  main.container article.container_UI nav ul li a {
+    color: #540ff5;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
